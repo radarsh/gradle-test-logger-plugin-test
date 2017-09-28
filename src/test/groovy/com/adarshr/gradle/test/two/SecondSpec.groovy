@@ -6,28 +6,28 @@ class SecondSpec extends Specification {
 
     def "happy path two"() {
         given:
-            sleep 500
+            sleep 100
         expect:
             true
     }
 
     def "successful bit"() {
         given:
-            sleep 500
+            sleep 100
         expect:
             true
     }
 
     def "another successful one"() {
         given:
-            sleep 500
+            sleep 100
         expect:
             true
     }
 
     def "failing for no reason"() {
         given:
-            sleep 200
+            sleep 100
         expect:
             false
     }

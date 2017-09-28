@@ -7,14 +7,14 @@ class MixedSpec extends Specification {
 
     def "happy path"() {
         given:
-            sleep 500
+            sleep 200
         expect:
             true
     }
 
     def "slow one"() {
         given:
-            sleep 5000
+            sleep 4000
         expect:
             true
     }
@@ -22,7 +22,7 @@ class MixedSpec extends Specification {
     @Ignore
     def "troublesome one"() {
         given:
-            sleep 500
+            sleep 200
         expect:
             true
     }

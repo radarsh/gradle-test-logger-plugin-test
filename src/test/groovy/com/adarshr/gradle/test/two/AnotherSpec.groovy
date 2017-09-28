@@ -6,21 +6,21 @@ class AnotherSpec extends Specification {
 
     def "should be true"() {
         given:
-            sleep 500
+            sleep 200
         expect:
             true
     }
 
     def "should not be false"() {
         given:
-            sleep 500
+            sleep 200
         expect:
             true
     }
 
     def "should equal to five"() {
         given:
-            sleep 500
+            sleep 100
         expect:
             5 == 2 + 3
     }

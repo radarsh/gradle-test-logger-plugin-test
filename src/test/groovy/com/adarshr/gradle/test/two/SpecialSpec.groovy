@@ -14,14 +14,14 @@ class SpecialSpec extends Specification {
 
     def "should be less than 10"() {
         given:
-            sleep 500
+            sleep 100
         expect:
             3 < 10
     }
 
     def "should fail"() {
         given:
-            sleep 500
+            sleep 50
         expect:
             false
     }
@@ -29,7 +29,7 @@ class SpecialSpec extends Specification {
     @Unroll
     def "sum of #a and #b should be #c"() {
         given:
-            sleep 500
+            sleep 50
         expect:
             a + b == c
         where:
