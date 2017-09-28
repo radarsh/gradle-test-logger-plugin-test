@@ -25,9 +25,15 @@ dependencies {
     }
 }
 
-//testlogger {
-//    theme 'standard'
-//}
+testlogger {
+    theme 'mocha'
+}
+
+test {
+    doFirst {
+        logger.lifecycle("CONSOLE ${gradle.startParameter.consoleOutput}")
+    }
+}
 
 task unicode {
     doFirst {
