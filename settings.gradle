@@ -1,12 +1,1 @@
-pluginManagement {
-    repositories {
-        gradlePluginPortal()
-        maven {
-            //url new File('d:/.m2/repository').toURI().toURL()
-            url new File('~/.m2/repository').toURI().toURL()
-//            url new File('/mnt/d/.m2/repository').toURI().toURL()
-        }
-    }
-}
-
 rootProject.name = 'gradle-test-logger-plugin-test'

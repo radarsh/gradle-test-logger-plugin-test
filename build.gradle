@@ -1,18 +1,7 @@
-buildscript {
-    repositories {
-        mavenLocal()
-    }
-    dependencies {
-        classpath 'com.adarshr:gradle-test-logger-plugin:0.0.1-8'
-    }
-}
-
 plugins {
     id 'groovy'
-//    id 'com.adarshr.test-logger' version '0.0.1-7'
+    id 'com.adarshr.test-logger' version '1.0.0'
 }
-
-apply plugin: 'com.adarshr.test-logger'
 
 repositories {
     mavenCentral()
@@ -27,14 +16,4 @@ dependencies {
 
 testlogger {
     theme 'mocha'
-}
-
-task unicode {
-    doFirst {
-        def writer = new PrintWriter(new OutputStreamWriter(System.out, 'utf-8'), true)
-
-        writer.println 'This is from a writer - \u221A √ ✓ \u2713'
-        println 'This is from a println - \u221A √ ✓ \u2713'
-        logger.lifecycle 'This is from logger.lifecycle - \u221A √ ✓ \u2713'
-    }
 }
