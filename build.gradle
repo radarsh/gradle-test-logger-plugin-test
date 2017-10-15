@@ -1,6 +1,6 @@
 plugins {
     id 'groovy'
-    id 'com.adarshr.test-logger' version '1.0.0'
+    id 'com.adarshr.test-logger' version '1.0.1'
 }
 
 repositories {
@@ -15,5 +15,5 @@ dependencies {
 }
 
 testlogger {
-    theme 'mocha'
+    theme 'standard'
 }
