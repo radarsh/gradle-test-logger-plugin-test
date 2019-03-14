@@ -1,6 +1,9 @@
+import org.gradle.api.tasks.testing.logging.TestLogEvent
+
+
 plugins {
-    id 'groovy'
-    id 'com.adarshr.test-logger' version '1.0.1'
+    id 'java'
+    id 'com.adarshr.test-logger' version '1.6.0'
 }
 
 repositories {
@@ -8,12 +11,23 @@ repositories {
 }
 
 dependencies {
-    compile 'org.codehaus.groovy:groovy-all:2.4.+'
-    testCompile('org.spockframework:spock-core:1.1-groovy-2.4') {
-        exclude module: 'groovy-all'
-    }
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.1.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.1.0'
+}
+
+test {
+    useJUnitPlatform()
+//
+//    testLogging {
+//        showStandardStreams = true
+//        events TestLogEvent.FAILED,
+//            TestLogEvent.PASSED,
+//            TestLogEvent.SKIPPED,
+//            TestLogEvent.STANDARD_OUT
+//    }
 }
 
 testlogger {
-    theme 'standard'
+    showStandardStreams true
+    showSkippedStandardStreams true
 }
