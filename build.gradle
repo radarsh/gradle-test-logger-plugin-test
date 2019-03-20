@@ -1,6 +1,6 @@
 plugins {
     id 'groovy'
-    id 'com.adarshr.test-logger' version '1.0.1'
+    id 'com.adarshr.test-logger' version '1.6.0'
 }
 
 repositories {
@@ -15,5 +15,11 @@ dependencies {
 }
 
 testlogger {
-    theme 'standard'
+    theme 'mocha'
+    slowThreshold 800
+    // to print stream only for failed test cases
+    showStandardStreams true
+    showPassedStandardStreams false
+    showSkippedStandardStreams false
+    showFailedStandardStreams true
 }
