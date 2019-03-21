@@ -16,10 +16,4 @@ dependencies {
 
 testlogger {
     theme 'mocha'
-    slowThreshold 800
-    // to print stream only for failed test cases
-    showStandardStreams true
-    showPassedStandardStreams false
-    showSkippedStandardStreams false
-    showFailedStandardStreams true
 }
